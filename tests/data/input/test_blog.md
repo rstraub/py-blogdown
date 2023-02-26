@@ -2,8 +2,8 @@
 layout: post
 title: "Great Title"
 author: Blogger
-categories: [Testing]
-tags: [Test-Driven Development]
+categories: [Languages]
+tags: [Python]
 description: "A great description"
 featured: true
 hidden: true
