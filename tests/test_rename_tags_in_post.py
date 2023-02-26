@@ -1,27 +1,32 @@
-import pytest
 import os
 import shutil
 
-from src.rename_tags import rename_tags_in_post
+import pytest
+
+from src.rename_tags import rename_tags_in_dir
 
 
 def test_should_rename_matching_tag_with_new_tag():
-    # Copy the reference test blog to a temporary file
-    test_post_path = _data_dir_path() + '/input/test_post.md'
-    tmp_path = test_post_path.replace('input', 'tmp')
-    copy_blog(test_post_path, tmp_path)
+    tmp_dir = _data_dir_path() + '/tmp/'
 
-    rename_tags_in_post(tmp_path, 'Scala', 'Python3')
+    _copy_blogs_to_tmp()
 
-    result = _get_post_contents(tmp_path)
+    posts = ['test_post_1.md', 'test_post_2.md']
+    rename_tags_in_dir(tmp_dir, 'Scala', 'Python3')
 
-    assert "Python3" in result
+    for post in posts:
+        tmp_post_path = tmp_dir + post
+
+        result = _get_post_contents(tmp_post_path)
+
+        assert "Python3" in result
 
 
 @pytest.fixture(autouse=True)
 def _fixture():
     yield
     _clean_tmp_dir()
+
 
 def _clean_tmp_dir():
     # Get the directory of the current script
@@ -34,8 +39,11 @@ def _clean_tmp_dir():
         os.remove(file_path)
 
 
-def copy_blog(test_file, new_file):
-    shutil.copyfile(test_file, new_file)
+def _copy_blogs_to_tmp():
+    tmp_dir = _data_dir_path() + '/tmp'
+    if os.path.exists(tmp_dir):
+        shutil.rmtree(tmp_dir)
+    shutil.copytree(_data_dir_path() + '/input', tmp_dir)
 
 
 def _data_dir_path():
