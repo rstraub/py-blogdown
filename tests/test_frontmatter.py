@@ -1,27 +1,15 @@
-import frontmatter
+from src.frontmatter import rename_tag
 
-post = """
-    ---
-tags: [Test-Driven Development]
+
+def test_should_rename_matching_tag_with_new_tag():
+    post = """
 ---
-# Scala
+tags: [Test-Driven Development, XP]
+---
+# Content
     """
 
+    result = rename_tag(post, 'Test-Driven Development', 'tdd')
 
-def test_should_parse_frontmatter():
-    result = frontmatter.loads(post)
-
-    assert result['tags'] == ['Test-Driven Development']
-
-
-def test_should_modify_frontmatter():
-    result = frontmatter.loads(post)
-    result['tags'][0] = 'Test-After Development'
-
-    assert 'Test-After Development' in frontmatter.dumps(result)
-
-
-def test_should_return_content():
-    result = frontmatter.loads(post)
-
-    assert result.content == '# Scala'
+    assert 'Test-Driven Development' not in result
+    assert 'tdd' in result
