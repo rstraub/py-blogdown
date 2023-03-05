@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "Other Title"
 author: Blogger
-categories: [Languages]
-tags: [Scala]
-description: "Other description"
+categories:
+- Languages
+description: Other description
 featured: true
 hidden: true
+layout: post
+tags:
+- Scala
+title: Other Title
 ---
 
 Introduction

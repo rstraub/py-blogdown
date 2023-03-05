@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "Great Title"
 author: Blogger
-categories: [Languages]
-tags: [Python3]
-description: "A great description"
+categories:
+- Languages
+description: A great description
 featured: true
 hidden: true
+layout: post
+tags:
+- Python3
+title: Great Title
 ---
 
 Introduction to Scala

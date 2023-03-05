@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "Great Title"
 author: Blogger
-categories: [Languages]
-tags: [Scala]
-description: "A great description"
+categories:
+- Languages
+description: A great description
 featured: true
 hidden: true
+layout: post
+tags:
+- Scala
+title: Great Title
 ---
 
 Introduction to Scala

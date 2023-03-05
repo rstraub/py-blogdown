@@ -1,12 +1,14 @@
 ---
-layout: post
-title: "Other Title"
 author: Blogger
-categories: [Languages]
-tags: [Python3]
-description: "Other description"
+categories:
+- Languages
+description: Other description
 featured: true
 hidden: true
+layout: post
+tags:
+- Python3
+title: Other Title
 ---
 
 Introduction

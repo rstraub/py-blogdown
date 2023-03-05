@@ -1,5 +1,7 @@
 import os
 
+from src.frontmatter import rename_tag
+
 
 def rename_tags_in_dir(dir_path, old_tag, new_tag):
     files_in_dir = os.listdir(dir_path)
@@ -15,8 +17,7 @@ def rename_tags_in_post(file_path, old_tag, new_tag):
     with open(file_path, 'r') as file:
         contents = file.read()
 
-    # Replace the old tag with the new tag
-    contents = contents.replace(old_tag, new_tag)
+    contents = rename_tag(contents, old_tag, new_tag)
 
     # Write the contents back to the file
     with open(file_path, 'w') as file:
