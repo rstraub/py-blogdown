@@ -9,8 +9,7 @@ from src.rename_tags import rename_tags_in_dir
 def test_should_rename_matching_tag_with_new_tag():
     output_dir = _data_dir_path() + '/output/'
     tmp_dir = _data_dir_path() + '/tmp/'
-
-    _copy_blogs_to_tmp()
+    _copy_blogs_to(tmp_dir)
 
     rename_tags_in_dir(tmp_dir, 'Scala', 'Python3')
 
@@ -39,11 +38,10 @@ def _clean_tmp_dir():
         os.remove(file_path)
 
 
-def _copy_blogs_to_tmp():
-    tmp_dir = _data_dir_path() + '/tmp'
-    if os.path.exists(tmp_dir):
-        shutil.rmtree(tmp_dir)
-    shutil.copytree(_data_dir_path() + '/input', tmp_dir)
+def _copy_blogs_to(dir):
+    if os.path.exists(dir):
+        shutil.rmtree(dir)
+    shutil.copytree(_data_dir_path() + '/input', dir)
 
 
 def _data_dir_path():
