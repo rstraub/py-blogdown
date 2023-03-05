@@ -3,7 +3,7 @@ layout: post
 title: "Great Title"
 author: Blogger
 categories: [Languages]
-tags: [Scala]
+tags: [Python3]
 description: "A great description"
 featured: true
 hidden: true

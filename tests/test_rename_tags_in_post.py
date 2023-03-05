@@ -7,19 +7,19 @@ from src.rename_tags import rename_tags_in_dir
 
 
 def test_should_rename_matching_tag_with_new_tag():
+    output_dir = _data_dir_path() + '/output/'
     tmp_dir = _data_dir_path() + '/tmp/'
 
     _copy_blogs_to_tmp()
 
-    posts = ['test_post_1.md', 'test_post_2.md']
     rename_tags_in_dir(tmp_dir, 'Scala', 'Python3')
 
+    posts = ['test_post_1.md', 'test_post_2.md']
     for post in posts:
-        tmp_post_path = tmp_dir + post
+        result = _get_post_contents(tmp_dir + post)
+        expected = _get_post_contents(output_dir + post)
 
-        result = _get_post_contents(tmp_post_path)
-
-        assert "Python3" in result
+        assert result == expected
 
 
 @pytest.fixture(autouse=True)

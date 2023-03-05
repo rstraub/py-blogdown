@@ -1,15 +1,15 @@
 ---
 layout: post
-title: "Great Title"
+title: "Other Title"
 author: Blogger
 categories: [Languages]
-tags: [Scala]
-description: "A great description"
+tags: [Python3]
+description: "Other description"
 featured: true
 hidden: true
 ---
 
-Introduction to Scala
+Introduction
 
 ## First Heading
 
