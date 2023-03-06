@@ -1,6 +1,6 @@
 import os
 
-from src.markdown import rename_tag
+from src.frontmatter import rename_tag
 
 
 def rename_tags_in_dir(dir_path, old_tag, new_tag):

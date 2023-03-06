@@ -4,10 +4,10 @@ Ideas of features to implement.
 
 - [X] Bulk rename tags
   - [X] Rename tags, not content in general
-- [ ] Bulk rename categories
 - [ ] Publish blog for jekyll (drafts to posts)
   - [ ] move file
   - [ ] prepend date to filename
+- [ ] Bulk rename categories
 - [ ] Extract links and assemble references section
 - [ ] etc...
 
