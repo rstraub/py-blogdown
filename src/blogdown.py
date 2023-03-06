@@ -2,7 +2,7 @@
 
 import argparse
 
-from src.rename_tags import rename_tags_in_dir
+from src.metadata.rename_tags import rename_tags_in_dir
 
 
 def main():

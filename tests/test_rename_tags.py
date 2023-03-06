@@ -3,7 +3,7 @@ import shutil
 
 import pytest
 
-from src.rename_tags import rename_tags_in_dir
+from src.metadata.rename_tags import rename_tags_in_dir
 
 
 def test_should_rename_matching_tag_with_new_tag():

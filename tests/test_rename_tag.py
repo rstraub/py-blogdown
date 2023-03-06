@@ -1,4 +1,4 @@
-from src.frontmatter_utils import rename_tag
+from src.metadata.rename_tags import rename_tag
 
 
 def test_should_rename_matching_tag_with_new_tag():

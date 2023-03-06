@@ -1,6 +1,5 @@
+import frontmatter
 import os
-
-from src.frontmatter_utils import rename_tag
 
 
 def rename_tags_in_dir(dir_path, old_tag, new_tag):
@@ -23,3 +22,11 @@ def rename_tags_in_post(file_path, old_tag, new_tag):
     with open(file_path, 'w') as file:
         file.write(contents)
 
+
+def rename_tag(post, old_tag, new_tag):
+    _post = frontmatter.loads(post)
+
+    updated_tags = [new_tag if tag == old_tag else tag for tag in _post['tags']]
+    _post['tags'] = updated_tags
+
+    return frontmatter.dumps(_post)
