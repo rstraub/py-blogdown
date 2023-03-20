@@ -2,18 +2,28 @@
 
 Ideas of features to implement.
 
+## Metadata
 - [X] Bulk rename tags
   - [X] Rename tags, not content in general
+- [ ] Bulk rename categories
+
+## Formatting
+- [ ] Automatic title-casing
+  - [ ] Article title
+  - [ ] Article headings
+- [ ] Remove emoji's
+- [ ] Extract links and assemble references section
+
+## Publishing
 - [ ] Publish blog for jekyll (drafts to posts)
   - [ ] move file
   - [ ] prepend date to filename
-- [ ] Bulk rename categories
-- [ ] Extract links and assemble references section
-- [ ] etc...
+- [ ] Publish blog to medium
+- [ ] Publish blog to dev.to
 
-## General Improvements
+## Quality of life Improvements
 
-- [ ] Only for markdown files
+- [ ] Only operate on markdown files
 - [ ] Add logging
 - [ ] Improve error handling
 - [ ] Add more tests
