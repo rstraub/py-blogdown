@@ -1,3 +1,4 @@
+import re
 from string import capwords
 
 
@@ -8,4 +9,5 @@ def title_case_post(post: str) -> str:
 
 
 def is_heading(text: str) -> bool:
-    return text.startswith(('#', '##'))
+    regex = re.compile(r'^#{1,6} ')
+    return bool(regex.match(text))

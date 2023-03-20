@@ -1,14 +1,24 @@
+import pytest
+
 from src.formatting.title_case import title_case_post
 
 
-def test_should_title_case_headings():
-    post = '# why dumb tests are smart'
-    expected = '# Why Dumb Tests Are Smart'
-
+@pytest.mark.parametrize('post,expected', [
+    ('# titlecase is better', '# Titlecase Is Better'),
+    ('## titlecase is better', '## Titlecase Is Better'),
+    ('### titlecase is better', '### Titlecase Is Better'),
+    ('#### titlecase is better', '#### Titlecase Is Better'),
+    ('##### titlecase is better', '##### Titlecase Is Better'),
+    ('###### titlecase is better', '###### Titlecase Is Better'),
+])
+def test_should_title_case_headings(post: str, expected: str):
     assert title_case_post(post) == expected
 
 
-def test_should_not_title_case_content():
-    post = 'why dumb tests are smart'
-
+@pytest.mark.parametrize('post', [
+    'titlecase is better',
+    '#titlecase is better'
+])
+def test_should_not_title_case_content(post: str):
     assert title_case_post(post) == post
+
