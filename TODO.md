@@ -23,8 +23,9 @@ Ideas of features to implement.
 
 ## Quality of life Improvements
 
-- [ ] Only operate on markdown files
+- [X] Create subcommands
 - [ ] Pass files and/or directories as arguments
 - [ ] Add logging
+- [ ] Only operate on markdown files
 - [ ] Improve error handling
-- [ ] Add more tests
+- [ ] Add more acceptance tests
