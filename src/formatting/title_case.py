@@ -1,11 +1,12 @@
 import re
-from string import capwords
+from titlecase import titlecase
 
 
 def title_case_post(post: str) -> str:
-    if is_heading(post):
-        return capwords(post)
-    return post
+    if not is_heading(post):
+        return post
+
+    return titlecase(post)
 
 
 def is_heading(text: str) -> bool:
