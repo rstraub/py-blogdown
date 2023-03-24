@@ -14,7 +14,8 @@ def main():
     parser = argparse.ArgumentParser(description='Streamline your markdown blogging workflow')
     subparsers = parser.add_subparsers(title='subcommands', description='Valid subcommands', help='Additional help')
 
-    rename_tag_parser = subparsers.add_parser('rename-tag', help='Rename a tag in all files in a directory')
+    rename_tag_parser = subparsers.add_parser('rename-tag',
+                                              help='Rename a tag in markdown files or files in a directory')
     rename_tag_parser.add_argument('locations', type=str, help='Files and/or directories in which to rename tags',
                                    default='.', nargs='+')
     rename_tag_parser.add_argument('-o', '--old-tag', type=str, required=True, help='Tag to rename')
