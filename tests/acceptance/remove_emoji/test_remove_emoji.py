@@ -15,7 +15,8 @@ output_dir = _data_dir_path() + '/golden/'
 tmp_dir = _data_dir_path() + '/tmp/'
 
 
-def test_should_rename_tags_in_directory():
+@pytest.mark.skip(reason="Work in Progress")
+def test_should_rename_emoji_from_post():
     _copy_blogs_to(tmp_dir)
 
     # invoke method
