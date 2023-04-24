@@ -8,6 +8,6 @@ PyYAML==6.0
 
 pip~=23.0.1
 wheel~=0.40.0
-setuptools~=67.6.1
+setuptools~=67.7.2
 titlecase~=2.4
 emoji~=2.2.0
