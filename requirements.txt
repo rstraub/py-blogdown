@@ -6,7 +6,7 @@ pytest==7.3.0
 python-frontmatter==1.0.0
 PyYAML==6.0
 
-pip~=23.0.1
+pip~=23.1.2
 wheel~=0.40.0
 setuptools~=67.6.1
 titlecase~=2.4
