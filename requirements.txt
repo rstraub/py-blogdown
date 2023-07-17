@@ -10,4 +10,4 @@ pip~=23.0.1
 wheel~=0.40.0
 setuptools~=68.0.0
 titlecase~=2.4
-emoji~=2.2.0
+emoji~=2.6.0
